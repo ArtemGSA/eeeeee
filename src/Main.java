@@ -1,19 +1,19 @@
 public class Main {
     public static class Author{
         private String authorName;
-        private String authorSurename;
+        private String authorSurname;
 
         public String getAuthorName() {
             return authorName;
         }
 
-        public String getAuthorSurename() {
-            return authorSurename;
+        public String getAuthorSurname() {
+            return authorSurname;
         }
 
         public Author(String authorName, String authorSurename){
             this.authorName = authorName;
-            this.authorSurename = authorSurename;
+            this.authorSurname = authorSurname;
         }
     }
 
@@ -49,5 +49,7 @@ public class Main {
         System.out.println("ckazka.name = " + ckazca.getBookName());
         Author gogol = new Author("Nikolai", "Gogol");
         Book souls = new Book("Dead souls", gogol, 1900);
+        souls.setYear(1888);
+        System.out.println(souls.getYear());
     }
 }
