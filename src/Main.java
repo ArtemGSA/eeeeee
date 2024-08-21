@@ -1,48 +1,4 @@
 public class Main {
-    public static class Author{
-        private String authorName;
-        private String authorSurname;
-
-        public String getAuthorName() {
-            return authorName;
-        }
-
-        public String getAuthorSurname() {
-            return authorSurname;
-        }
-
-        public Author(String authorName, String authorSurename){
-            this.authorName = authorName;
-            this.authorSurname = authorSurname;
-        }
-    }
-
-    public static class Book{
-        private String bookName;
-        private Author author;
-        private int year;
-
-        public String getBookName() {
-            return bookName;
-        }
-
-        public Author getAuthor() {
-            return author;
-        }
-
-        public int getYear() {
-            return year;
-        }
-
-        public void setYear(int year) {
-            this.year = year;
-        }
-        public Book(String bookName, Author author, int year){
-            this.bookName = bookName;
-            this.author = author;
-            this.year = year;
-        }
-    }
     public static void main(String[] args) {
         Author aleksandr = new Author("Aleksandr", "Pushkin");
         Book ckazca = new Book("O Zolotoi ribke", aleksandr, 1800);
@@ -51,5 +7,11 @@ public class Main {
         Book souls = new Book("Dead souls", gogol, 1900);
         souls.setYear(1888);
         System.out.println(souls.getYear());
+        System.out.println(aleksandr.toString());
+        System.out.println(ckazca.toString());
+        System.out.println(aleksandr.equals(gogol));
+        System.out.println(aleksandr.equals(aleksandr));
+        System.out.println(ckazca.equals(souls));
+        System.out.println(ckazca.equals(ckazca));
     }
 }
