@@ -13,6 +13,7 @@ public class Main {
         System.out.println(aleksandr.equals(aleksandr));
         System.out.println(ckazca.equals(souls));
         System.out.println(ckazca.equals(ckazca));
+        System.out.println(ckazca.equals(null));
         System.out.println(ckazca.toString());
     }
 }
