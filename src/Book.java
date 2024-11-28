@@ -21,11 +21,15 @@ public class Book {
     }
     @Override
     public boolean equals(Object other){
-        if(this.getClass() != other.getClass()){
+        if(this.getClass()!=null){
+            if(this.getClass() != other.getClass()){
+                return false;
+            }
+            if(this == other){
+                return true;
+            }}
+        else{
             return false;
-        }
-        if(this == other){
-            return true;
         }
         Book oBook = (Book) other;
         return Objects.equals(author, oBook.getAuthor())&& Objects.equals(year, oBook.year)&& Objects.equals(bookName, oBook.bookName);
@@ -40,7 +44,7 @@ public class Book {
     }
     @Override
     public String toString() {
-        return "Название "+this.bookName+" Год издания "+this.year;
+        return "Название "+this.bookName+" Год издания "+this.year+" Автор "+getAuthor();
     }
 
 }
